@@ -28,12 +28,12 @@
 
 
 <!-- CONSTANTS -->
-<constant name="C_titlebar" value="#636E73" />
-<constant name="C_titlebar_unfocused" value="#454D50" />
+<constant name="C_titlebar" value="#505967" />
+<constant name="C_titlebar_unfocused" value="#495664" />
 <constant name="C_border_focused" value="#636E73" />
 <constant name="C_border_unfocused" value="#454D50" />
-<constant name="C_title_focused" value="#D3D4D5" />
-<constant name="C_title_unfocused" value="#929A9D" />
+<constant name="C_title_focused" value="#eee8d5" />
+<constant name="C_title_unfocused" value="#839496" />
 
 <!-- GEOMETRY -->
 
