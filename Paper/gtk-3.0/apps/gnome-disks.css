@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -22,6 +22,11 @@
  * Header *
  **********/
 
+GduWindow,
+GduWindow * {
+	color: #555555;
+}
+
 GduWindow .titlebar,
 GduWindow .header-bar {
     background-color: @disks;
@@ -32,10 +37,7 @@ GduWindow .header-bar:backdrop {
     background-color: shade(@disks,0.9);
 }
 
-GduVolumeGrid *:active,
-GduVolumeGrid *:focus,
-GduVolumeGrid *:selected {
-	background-color: @selection;
-	color: @selection_foreground;
+GduWindow GtkToolbar,
+GduWindow .toolbar {
+    background-color: @disks;
 }
-

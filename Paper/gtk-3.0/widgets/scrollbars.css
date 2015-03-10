@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -70,7 +70,7 @@
 .scrollbar.trough {
     border-radius: 10px;
     background-image: none;
-    background: none;
+    background:@background;
     border-width: 0;
     border-image: none;
 }

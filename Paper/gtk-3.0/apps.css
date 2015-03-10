@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -52,3 +52,4 @@
 @import url("apps/synaptic.css");
 @import url("apps/unity.css");
 @import url("apps/xfce.css");
+@import url("apps/yelp.css");

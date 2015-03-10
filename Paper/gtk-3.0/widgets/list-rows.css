@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -26,7 +26,7 @@
     border-radius: 0px;
     border:none;
     background-image: none;
-    background-color: transparent;
+    background-color: @background;
     color: @text;
 }
 
@@ -84,7 +84,7 @@
 .list-row:backdrop {
     border:none;
     background-image: none;
-    background-color: shade(@base, 0.95);
+    background-color: @backdrop_background;
     color: @backdrop_text;
 }
 

@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -32,7 +32,7 @@
 
 /* Backdrop colors */
 @define-color backdrop_base shade(@base, 0.9);
-@define-color backdrop_background shade(@background, 0.98);
+@define-color backdrop_background shade(@background, 0.99);
 @define-color backdrop_foreground shade(@foreground, 1.2);
 @define-color backdrop_border shade(@border, 1.02);
 @define-color backdrop_separator shade(@separator, 0.99);
@@ -121,7 +121,7 @@
  * Troughs *
  ***********/
 @define-color trough_active @selected_background;
-@define-color trough_background alpha(@selected_background, 0.2);
+@define-color trough_background @base;
 @define-color insensitive_trough_background shade(@background, 0.9);
 @define-color backdrop_trough_background @backdrop_background;
 

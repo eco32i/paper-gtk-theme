@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -21,7 +21,9 @@
  * Separators *
  **************/
  
+GtkSeparator,
 .separator,
+.pane-separator,
 .button .separator {
     color: @separator;
 }
@@ -58,7 +60,7 @@
 
 .notebook .pane-separator,
 .notebook .pane-separator:hover {
-    background-color: @hover_background;
+    background-color: @background;
 }
 
 .notebook .pane-separator:backdrop,

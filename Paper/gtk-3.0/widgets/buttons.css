@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -18,8 +18,8 @@
 
 @define-color button_background shade(@base, 0.98);/* Button background color */
 @define-color button_border @border;/* Button border color */
-@define-color backdrop_button_background shade(@backdrop_background, 0.98);/* Backdrop button background color */
-@define-color backdrop_button_border shade(@button_border, 0.98); /* Backdrop button border color */
+@define-color backdrop_button_background @backdrop_background;/* Backdrop button background color */
+@define-color backdrop_button_border @backdrop_border; /* Backdrop button border color */
 
 /***********
  * Buttons *
@@ -211,6 +211,7 @@ GtkCalendar.button:backdrop:hover,
 
 .button:backdrop GtkLabel,
 .button:backdrop:hover GtkLabel,
+.button:focus:backdrop GtkLabel,
 .button:active:backdrop GtkLabel {
     color: @backdrop_text;
 }
@@ -223,15 +224,20 @@ GtkCalendar.button:backdrop:hover,
     color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
 
-/* Labels */
+/* Text Button Labels */
 .text-button GtkLabel {
     color: @text;
 }
 
+.text-button:focus GtkLabel {
+    /*color: shade(@text, 2.0);*/
+    color: @text;
+}
+
 .text-button:active GtkLabel,
-.text-button:focus GtkLabel,
 .text-button:hover GtkLabel {
-    color: shade(@text, 2.0);
+    color: shade(@selection, 0.85);
+    /*color: @text;*/
 }
 
 .text-button:backdrop GtkLabel,
@@ -245,6 +251,37 @@ GtkCalendar.button:backdrop:hover,
 }
 
 .text-button:insensitive:backdrop GtkLabel {
+    color: mix(@backdrop_text, @insensitive_text, 0.5);
+}
+
+
+/* Image Button Images */
+.image-button GtkImage {
+    color: @text;
+}
+
+.image-button:focus GtkImage {
+    /*color: shade(@text, 2.0);*/
+    color: @text;
+}
+
+.image-button:active GtkImage,
+.image-button:hover GtkImage {
+    /*color: alpha(#000, 0.5);*/
+    color: @selected_foreground;
+}
+
+.image-button:backdrop GtkImage,
+.image-button:backdrop:hover GtkImage,
+.image-button:active:backdrop GtkImage {
+    color: @backdrop_text;
+}
+
+.image-button:insensitive GtkImage {
+    color: @insensitive_text;
+}
+
+.image-button:insensitive:backdrop GtkImage {
     color: mix(@backdrop_text, @insensitive_text, 0.5);
 }
 

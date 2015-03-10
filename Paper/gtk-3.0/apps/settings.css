@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -32,20 +32,6 @@ CcWindow .header-bar:backdrop {
     background-color: shade(@settings,0.9);
 }
 
-/* Switch */
-CcWindow .header-bar GtkSwitch.trough:active {
-    background-color: @settings;
-}
-
-CcWindow GtkSwitch.trough:active {
-    background-color: @settings;
-}
-
-CcWindow .header-bar GtkSwitch.slider:active:backdrop,
-CcWindow .header-bar GtkSwitch.slider:backdrop {
-    background-color: shade(@settings, 0.9);
-}
-
 /*******
  * Nav *
  *******/
@@ -71,7 +57,7 @@ CcShellItemView .button {
  * Iconview *
  ************/
  
-CcWindow GtkIconView.view.cell {
+/*CcWindow GtkIconView.view.cell {
     border: none;
 }
  
@@ -85,7 +71,7 @@ CcWindow GtkIconView.view.cell:selected,
 CcWindow GtkIconView.view.cell:selected:focus {
     border: 1px solid @settings;
     background-color: @settings;
-}
+}*/
 
 
 /************
@@ -138,4 +124,8 @@ CcWindow .button.list-row:active:selected:hover {
 CcWindow .button.list-row:hover:selected {
     background-color: alpha(@settings, 0.2);
     color: @settings;
+}
+
+CcNetworkPanel GtkNotebook > .frame {
+    border: none;
 }

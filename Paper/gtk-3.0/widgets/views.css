@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -27,9 +27,15 @@
     color: @foreground;
 }
 
+GtkViewPort {
+    background: none;
+    border: none;
+    color: @foreground;
+}
+
 .frame:backdrop {
     border-color: @backdrop_border;
-    background-color: @backdrop_background;
+    background: none;
     color: @backdrop_text;
 }
 
@@ -42,6 +48,7 @@
 .flat {
    border:none;
 }
+
 
 /********
  * View *
@@ -243,7 +250,7 @@ GtkIconView.content-view.check:selected {
     border-width: 0 0 1px 1px;
 
     background-image: none;
-    background-color:@base;;
+    background-color:@base;
 
     border-color: @border;
 }

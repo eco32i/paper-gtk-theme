@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -21,8 +21,14 @@
  **********/
 
 .label,
+.label GtkLabel,
 GtkLabel {
-	color: @text;
+	color: inherit;
+}
+
+.dim-label,
+.dim-label GtkLabel {
+	color: alpha(@text,0.5)
 }
 
 .label:active,
@@ -31,7 +37,7 @@ GtkLabel {
 *:active GtkLabel,
 *:focus GtkLabel,
 *:hover GtkLabel {
-    color: @selected_foreground;
+    color: inherit;
 }
 
 .label:backdrop,
@@ -40,15 +46,15 @@ GtkLabel {
 *:backdrop GtkLabel,
 *:backdrop:hover GtkLabel,
 *:active:backdrop GtkLabel {
-    color: @backdrop_text;
+    color: inherit;
 }
 
 .label:insensitive,
 *:insensitive GtkLabel {
-    color: @insensitive_text;
+    color: inherit;
 }
 
 .label:insensitive:backdrop,
 *:insensitive:backdrop GtkLabel {
-    color: mix(@backdrop_text, @insensitive_text, 0.5);
+    color: inherit;
 }

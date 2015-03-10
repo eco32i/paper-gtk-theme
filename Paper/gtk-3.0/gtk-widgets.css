@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -41,9 +41,13 @@
     -GtkWindow-resize-grip-height: 0;
 
     padding: 0;
-    background: inherit;
     background-color: inherit;
     color: inherit;
+/*    outline-color: rgba(46, 52, 54, 0.3);
+    outline-style: dashed;
+    outline-offset: -3px;
+    outline-width: 1px;
+    outline-radius: 2px;*/
 }
 
 /* Import Widget CSS */
@@ -57,6 +61,7 @@
 @import url("widgets/color-chooser.css");
 @import url("widgets/column-header.css");
 @import url("widgets/combobox.css");
+@import url("widgets/composited-indicator.css");
 @import url("widgets/cursor-handles.css");
 @import url("widgets/destructive-action-buttons.css");
 @import url("widgets/dialogs.css");
@@ -69,13 +74,13 @@
 @import url("widgets/inline-toolbars.css");
 @import url("widgets/labels.css");
 @import url("widgets/levelbars.css");
-@import url("widgets/links.css");
 @import url("widgets/linked-buttons.css");
+@import url("widgets/links.css");
 @import url("widgets/list-rows.css");
 @import url("widgets/menu-button.css");
-@import url("widgets/message-dialogs.css");
 @import url("widgets/menubars.css");
 @import url("widgets/menus.css");
+@import url("widgets/message-dialogs.css");
 @import url("widgets/miscellaneous.css");
 @import url("widgets/notebook.css");
 @import url("widgets/osd.css");
@@ -92,6 +97,7 @@
 @import url("widgets/statusbar.css");
 @import url("widgets/suggested-action-buttons.css");
 @import url("widgets/switches.css");
+@import url("widgets/tiles.css");
 @import url("widgets/titlebar.css");
 @import url("widgets/toolbars.css");
 @import url("widgets/tooltips.css");

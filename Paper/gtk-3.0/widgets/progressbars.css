@@ -1,5 +1,5 @@
 
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -28,17 +28,17 @@ GtkProgressBar {
 }
 
 GtkProgressBar.progressbar {
-    color: @selected_foreground;
+    color: alpha(#000,0.5);
     background-color: @progressbar_background;
 }
 
 GtkProgressBar.progressbar:backdrop {
-    color: @selected_foreground;
+    color: alpha(#000,0.5);
     background-color: @backdrop_progressbar_background;
 }
 
 GtkProgressBar.trough {
-    border: 1px solid @trough_background;
+    border: 1px solid alpha(#000, 0.2);
     background-color: @trough_background;
 }
 
@@ -50,7 +50,7 @@ GtkProgressBar.trough {
 .progressbar.vertical row:hover,
 .progressbar.vertical row:selected,
 .progressbar.vertical row:selected:focus {
-    color: @selected_foreground;
+    color: alpha(#000,0.5);
     background-color: @selection;
 }
 
@@ -62,7 +62,7 @@ GtkProgressBar.trough {
 .progressbar.vertical row:hover:insensitive,
 .progressbar.vertical row:selected:insensitive,
 .progressbar.vertical row:selected:focus:insensitive {
-    color: @selected_foreground;
+    color: alpha(#000,0.5);
     background-color: @selection;
 }
 
@@ -74,7 +74,7 @@ GtkProgressBar.trough {
 .progressbar.vertical row:hover:backdrop,
 .progressbar.vertical row:selected:backdrop,
 .progressbar.vertical row:selected:focus:backdrop {
-    color: @selected_foreground;
+    color: alpha(#000,0.5);
     background-color: @backdrop_progressbar_background;
 }
 

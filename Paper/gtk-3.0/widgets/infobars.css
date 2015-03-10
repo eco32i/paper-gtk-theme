@@ -1,4 +1,4 @@
-/* Copyright 2014 Sam Hewitt.
+/* Copyright 2015 Sam Hewitt.
 *
 * This file is part of the Paper GTK theme.
 *
@@ -19,15 +19,21 @@
 /**************
  * GtkInfoBar *
  **************/
- 
+
+.info,
 GtkInfoBar {
-    background-color: @base;
+    background-color: @background;
+    background-image: linear-gradient(to bottom, 
+                                      @background,
+                                      shade(@background, 0.98)
+                                      );
     color: @foreground;
-    border: solid @border;
+    border-style: solid;
+    border-color: @border;
     border-bottom-width: 1px;
 }
 
-
+.info GtkLabel,
 GtkInfoBar GtkLabel {
     color: @foreground;
 }
