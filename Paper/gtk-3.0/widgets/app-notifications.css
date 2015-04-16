@@ -22,19 +22,20 @@
 *********************/
 .app-notification,
 .app-notification.frame {
-    border: 1px solid alpha(#000, 0.1);
+    border: 1px solid @border;
     border-top-width: 0px;
     border-radius: 6px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     padding: 8px;
-    background-color: alpha(#fff, 0.9);
+    background-color: @background;
     color: @text;
 }
 
 .app-notification:backdrop,
 .app-notification.frame:backdrop {
-    background-image: none;
+  background-color: @backdrop_background;
+  border-color: @backdrop_border;
 }
 
 .app-notification .button, .app-notification .header-bar .button.titlebutton, .header-bar .app-notification .button.titlebutton,

@@ -21,7 +21,6 @@
 
 gtk-color-scheme = "base_color:#eee8d5\nfg_color:#eee8d5\ntooltip_fg_color:#586e75\nmenubar_color:#495664\nselected_bg_color:#fdf6e3\nselected_fg_color:#586e75\ntext_color:#586e75\nwm_color:#495664\nunfocused_wm_color:#495664\nbg_color:#495664\ninsensitive_bg_color:#495664\ntooltip_bg_color:#eee8d5\npanel_bg_color:#495664\nmenu_fg_color:#abada9\nlink_color:#268bd2"
 
-
 gtk-auto-mnemonics              = 1
 gtk-primary-button-warps-slider = 1
 

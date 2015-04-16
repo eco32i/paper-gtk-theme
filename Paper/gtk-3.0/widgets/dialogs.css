@@ -59,7 +59,17 @@ GtkMessageDialog .titlebar:backdrop {
 GtkDialog,
 GtkAboutDialog,
 GtkMessageDialog {
+    background: @background;
     color: @text;
+    box-shadow: none;
+}
+
+
+GtkDialog:backdrop,
+GtkAboutDialog:backdrop,
+GtkMessageDialog:backdrop {
+    background: @backdrop_background;
+    color: @backdrop_text;
     box-shadow: none;
 }
 
@@ -73,3 +83,15 @@ GtkDialog .toolbar {
     background-image: none;
     background-color: @background;
 }
+
+GtkFileChooserDialog .search-bar {
+  background-color: @base;
+  border-color: @background;
+  box-shadow: none; }
+  GtkFileChooserDialog .search-bar:backdrop {
+    background-color: white;
+    border-color: @background; }
+GtkFileChooserDialog .dialog-action-box {
+  border-top: 1px solid @border; }
+  GtkFileChooserDialog .dialog-action-box:backdrop {
+    border-top-color: @backdrop_border; }
