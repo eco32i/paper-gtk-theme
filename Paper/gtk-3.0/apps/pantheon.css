@@ -52,14 +52,14 @@ BirdieWidgetsTweetList * {
 
 .gala-notification {
     border-width: 0;
-    border-radius: 9px;
+    border-radius: 2px;
     color: white;
-    border: 1px solid @panel;
-    background-color: alpha(@panel, 0.9);
+    border: 1px solid #fff;
+    background-color: #fff;
 }
 
 .gala-notification .title, .gala-notification .label {
-    color: white;
+    color: @text;
 }
 
 .gala-button {
@@ -102,14 +102,30 @@ BirdieWidgetsTweetList * {
 /********
 * Files *
 ********/
-.pathbar:focus {
+.pathbar .entry:focus,
+.marlin-pathbar .pathbar .entry:focus {
     padding: 0px;
-    box-shadow: inset 0 -2px 0 0 @header_text;
+    border-radius: 2px;
+    background-color: @base;
+    color: @text;
+    border: 1px solid @selection;
+    box-shadow:inset 0 1px 1px 0 alpha(#000, 0.1);
 }
 
-.pathbar:active {
+.pathbar .entry:active,
+.marlin-pathbar .pathbar .entry:active {
     padding: 0px;
-    box-shadow: inset 0 -2px 0 0 @header_text;
+    border-radius: 2px;
+    background-color: @base;
+    color: @text;
+    border: 1px solid @selection;
+    box-shadow:inset 0 1px 1px 0 alpha(#000, 0.1);
+}
+
+.marlin-pathbar,
+.marlin-pathbar .pathbar .entry .button.raised {
+    background-color: red;
+    color: red;
 }
 
 /********
@@ -195,7 +211,7 @@ NoiseWidgetsTileView {
 }
 
 .app:focus {
-    background-color: alpha(#000, 0.20);
+    /*background-color: alpha(#000, 0.20);*/
 }
  
 .search-item {

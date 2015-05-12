@@ -17,6 +17,11 @@
 */
 
 
+@define-color backdrop_header_text alpha(@header_text, 0.7);
+@define-color insensitive_header_text alpha(@header_text, 0.5);
+@define-color backdrop_header_text_dark alpha(@header_text_dark, 0.7);
+@define-color insensitive_header_text_dark alpha(@header_text_dark, 0.5);
+
 /**************
  * Header Bar *
  **************/
@@ -24,18 +29,18 @@
 .header-bar {
     padding:0;
     border: none;
-    border-radius: 3px 3px 0 0;
+    border-radius: 4px 4px 0 0;
     background-color: @header;
     color: @header_text;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1),
-                inset 0 -1px 0 0 rgba(0,0,0,0.1),
-                inset 0 -3px 3px -4px alpha(#000, 0.4);
+                inset 0 -1px 2px 0 rgba(0,0,0,0.1);
 }
 
 
 .maximized .header-bar {
     border-radius: 0px;
     box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.1);
+    box-shadow: none;
 }
 
 .header-bar:backdrop {
@@ -50,20 +55,27 @@
 }
 
 /* Title */
+.title,
 .header-bar .title {
+    padding: 0;
     padding-left: 13px;
     padding-right: 13px;
-    font: Bold 10;
+    font: Bold;
     color: @header_text;
+}
+
+.header-bar .button.linked .title,
+.header-bar .button.flat .title {
+    padding: 0;
 }
 
 .header-bar .title:backdrop {
     color: @backdrop_header_text;
 }
 
-
 /* Subtitle */
 .header-bar .subtitle {
+    padding: 0;
     font: 9;
 }
 
@@ -82,7 +94,7 @@
 /* Separator */
 .header-bar .separator {
     background: none;
-    color: transparent;
+    color: @separator;
 }
 
 /**********************
@@ -90,7 +102,6 @@
  **********************/
 .header-bar .flat,
 .header-bar .button,
-.header-bar .title,
 .header-bar .titlebutton,
 .header-bar .linked,
 .header-bar .text-button,
@@ -99,7 +110,7 @@
     background-image: none;
     box-shadow: none;
     border: none;
-    padding: 12px 15px;
+    padding: 13px 15px;
 }
 
 /* Normal Button */
@@ -115,7 +126,6 @@
     border-radius: 0px;
     border: none;
     box-shadow: none;
-    outline: none;
     color: @header_text;
 }
 
@@ -131,13 +141,12 @@
     /*background-color: alpha(#000, 0.1);*/
     background-image: none;
     border: none;
-    outline: none;
     color: @header_text;
     box-shadow: inset 0 -2px 0 0 @header_text;
 }
 
 .header-bar .text-button:active {
-    font: Bold 10;
+    font: Bold;
 }
 
 /* Checked Button */
@@ -150,15 +159,14 @@
 .header-bar .image-button:checked {
     border-radius: 0px;
     background-image: none;
-    /*background-color: alpha(#000, 0.1);*/
+    background-color: none;
     border: none;
-    outline: none;
     color: @header_text;
-    box-shadow: inset 0 -2px 0 0 @header_text;
+    box-shadow:inset 0 -2px 0 0 @header_text;
 }
 
 .header-bar .text-button:checked {
-    font: Bold 10;
+    font: Bold;
 }
 
 /* Focus Button */
@@ -173,10 +181,10 @@
     background-color: transparent;
     background-image: none;
     border: none;
-    outline: none;
     color: @header_text;
     box-shadow: inset 0 -2px 0 0 @header_text;
 }
+
 
 /* Hover Button */
 .header-bar .button:hover,
@@ -190,7 +198,6 @@
     background-color: alpha(#000, 0.1);
     background-image: none;
     border: none;
-    outline: none;
     /*box-shadow: inset 0 -2px 0 0 @header_text;*/
     color: @header_text;
 }
@@ -208,7 +215,6 @@
     background-image: none;
     border: none;
     box-shadow: none;
-    outline: none;
     color: @backdrop_header_text;
 }
 
@@ -245,13 +251,12 @@
     background-color: transparent;
     background-image: none;
     border: none;
-    outline: none;
     color: @backdrop_header_text;
     box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
 }
 
 .header-bar .text-button:active:backdrop {
-    font: Bold 10;
+    font: Bold;
 }
 
 /* Backdrop:Hover Button */
@@ -266,7 +271,6 @@
     background-image: none;
     border-radius: 0px;
     border: none;
-    outline: none;
     box-shadow: inset 0 -2px 0 0 @backdrop_header_text;
     color: @backdrop_header_text;
 }
@@ -284,7 +288,6 @@
     border-radius: 0px;
     border: none;
     box-shadow: none;
-    outline: none;
     color: @insensitive_header_text;
 }
 
@@ -300,10 +303,8 @@
     background-color: transparent;
     background-image: none;
     border: none;
-    outline: none;
     color: @insensitive_header_text;
 }
-
 
 
 /* Button Images */
@@ -335,7 +336,8 @@
 .header-bar .button GtkArrow,
 .header-bar .button GtkArrow:active,
 .header-bar .button GtkArrow:focus,
-.header-bar .button GtkArrow:hover {
+.header-bar .button GtkArrow:hover {    
+    -GtkComboBox-arrow-scaling: 1;
     color: @header_text;
 }
 
@@ -398,8 +400,8 @@
 .header-bar .separator,
 .header-bar .button .separator,
 .header-bar .button.separator {
-    background: none;
-    color: transparent;
+    background: inherit;
+    color: @separator;
     border:none;
 } 
 
@@ -414,7 +416,6 @@
     padding: 13px;
     border-radius: 0px;
     border: 1px solid transparent;
-    outline: none;
     box-shadow: none;
 }
 
@@ -423,14 +424,12 @@
     background: none;
     color: @header_text;
     border: none;
-    outline: none;
 }
 
 .header-bar .entry:backdrop {
     background: none;
     color: @backdrop_header_text;
     border: none;
-    outline: none;
 }
 
 .header-bar .entry:selected,

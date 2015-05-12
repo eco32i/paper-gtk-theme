@@ -16,10 +16,17 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-RBHeader {
-	padding: 0px;
+#conditions-image {
+	color: #fff;
 }
 
-RBLibrarySource  {
-	padding: 0px;
+#temperature-label {
+	color: #fff;
+}
+
+#forcast-viewport {
+	background: alpha(#000,0.7);
+	border: none;
+	border-radius: 4px;
+	color: #fff;
 }

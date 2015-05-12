@@ -16,10 +16,10 @@
 * with the Paper GTK theme. If not, see http://www.gnu.org/licenses/.
 */
 
-RBHeader {
-	padding: 0px;
-}
+/*******
+ * CSD *
+ *******/
 
-RBLibrarySource  {
-	padding: 0px;
+.csd.background {
+    border-radius: 0 0 4px 4px;
 }
