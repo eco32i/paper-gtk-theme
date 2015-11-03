@@ -151,8 +151,6 @@ VteTerminal {
     background-color: @terminal_background;
     color: @terminal_text;
 }
-<<<<<<< HEAD
-=======
 
 /*************
  * Scrollbar *

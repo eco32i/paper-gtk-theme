@@ -5,7 +5,11 @@
 style "chrome-gtk-frame"
 {
 	ChromeGtkFrame::frame-color = @wm_color
+<<<<<<< HEAD
 	ChromeGtkFrame::inactive-frame-color = shade(1.07, @wm_color)
+=======
+	ChromeGtkFrame::inactive-frame-color = @unfocused_wm_color
+>>>>>>> 6a5f14cfe697b0a829456a1fd560acdcddc6043f
 
 	ChromeGtkFrame::frame-gradient-size = 16
 	ChromeGtkFrame::frame-gradient-color = shade(1.07, @wm_color)
