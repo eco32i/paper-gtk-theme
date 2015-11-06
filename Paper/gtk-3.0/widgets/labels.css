@@ -23,7 +23,7 @@
 .label,
 .label GtkLabel,
 GtkLabel {
-	color: inherit;
+	color: @text;
 }
 
 .dim-label,
